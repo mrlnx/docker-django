@@ -1,0 +1,11 @@
+web:
+  container_name: django
+  image: mrlnx/django
+  working_dir: /app
+  command: python manage.py runserver 0.0.0.0:8000
+  volumes:
+    - .:/app
+    - ~/app/python:/usr/local/lib/python2.7
+    - ~/app/bin:/usr/local/bin
+  ports:
+    - "8000:8000"
