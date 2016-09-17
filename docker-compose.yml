@@ -9,3 +9,11 @@ web:
     - ~/app/bin:/usr/local/bin
   ports:
     - "8000:8000"
+
+db:
+  container_name: postgresql
+  image: mrlnx/postgresql
+  volumes:
+    - ~/app/postgresql:/var/lib/postgresql
+  ports:
+    - "5432:5432"
